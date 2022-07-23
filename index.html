@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 10px 10%;
+            background-color: #ddd;
+            text-align: center;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            margin: 30px 0;
+            color: red;
+            font-size: 40px;
+        }
+
+        div{
+            margin-bottom: 200px;
+        }
+
+        h2 {
+            margin: 100px auto;
+            color: rgb(174, 0, 255);
+            font-size: 40px;
+        }
+
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0279c3;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #image{
+            width: 1500px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+         <h2>Hi, Here You can see all my Solo Projects</h2>
+
+        <img id="image" src="" alt="image">
+    </div>
+    <div>
+
+
+        <h1>Solo Projects</h1>
+
+        <table>
+            <thead>
+                <th>Project Name</th>
+                <!-- <th>Preview</th> -->
+                <th>See Live</th>
+                <th>github</th>
+                <th>Tect Stack</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tic Tac Toe Game</td>
+
+                    <td>
+                        <a href="https://tic-tac-toe-zeta-sooty.vercel.app/">
+                            Play Live
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://tic-tac-toe-zeta-sooty.vercel.app/">
+                            See git
+                        </a>
+                    </td>
+
+                    <td>HTML, CSS, JavaScript</td>
+
+                </tr>
+                <tr>
+                    <td>Translation App</td>
+
+                    <td>
+                        <a href="https://translation-app-pink.vercel.app">
+                            See Live
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/Neha-251/Translation-App">
+                            See git
+                        </a>
+                    </td>
+
+                    <td>HTML, CSS, JavaScript</td>
+
+                </tr>
+                <tr>
+                    <td>Search with debounce and infinite scroll</td>
+
+                    <td>
+                        <a href="https://rick-and-morty-search-sand.vercel.app">
+                            See Live
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/Neha-251/Rick-and-Morty-Search">
+                            See Git
+                        </a>
+                    </td>
+
+                    <td>React, CSS, infinite scroll with intersection observer API</td>
+
+                </tr>
+                <tr>
+                    <td>Job Listing Application: Filter and sort from backend</td>
+
+                    <td>
+                        <a href="https://job-listing-application.vercel.app">
+                            See Live
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/Neha-251/job-listing-application">
+                            See Git
+                        </a>
+                    </td>
+
+                    <td>React, CSS, NodeJs, Express, MongoDB</td>
+
+                </tr>
+                <tr>
+                    <td>Food App: Filter from backend</td>
+
+                    <td>
+                        <a href="https://advanced-mongo-food-app.vercel.app">
+                            See Live
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/Neha-251/Advanced-Mongo--Ecommerce">
+                           See Git
+                        </a>
+                    </td>
+
+                    <td>React, CSS, NodeJs, Express, MongoDB</td>
+
+                </tr>
+                <tr>
+                    <td>Weather App - live location</td>
+
+                    <td>
+                        <a href="https://dashing-paprenjak-167efb.netlify.app/">
+                            See Live
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/Neha-251/Weather-App-with-Live-location">
+                           See Git
+                        </a>
+                    </td>
+
+                    <td>HTML, CSS, JavaScript</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+
+let corousol = document.getElementById("slideshow");
+
+let images = ['images/foodApp.png', 'images/jobListing.png', 'images/rickSearch.png', 'images/tictactoe.png', 'images/translation.png'];
+var i = 0;
+
+function slide() {
+
+    document.getElementById("image").src = images[i];
+
+    // for(let i = 0; i < images.length; i++) {
+        if (i < images.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+    // }
+
+}
+setInterval("slide()", 3000);
+window.onload = slide();
+
+
+
+</script>
